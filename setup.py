@@ -3,6 +3,10 @@
 from setuptools import setup, find_packages
 import sys
 
+try:
+    import gtk.glade
+except ImportError:
+    raise Exception("python glade bindings are necessary (need to be install using your OS package management system)")
 
 setup(
 		name = 'lorem-ipsum-generator',
